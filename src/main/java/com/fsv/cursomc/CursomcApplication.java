@@ -16,7 +16,7 @@ import com.fsv.cursomc.domain.Estado;
 import com.fsv.cursomc.domain.ItemPedido;
 import com.fsv.cursomc.domain.Pagamento;
 import com.fsv.cursomc.domain.PagamentoComBoleto;
-import com.fsv.cursomc.domain.PagamentoComCartão;
+import com.fsv.cursomc.domain.PagamentoComCartao;
 import com.fsv.cursomc.domain.Pedido;
 import com.fsv.cursomc.domain.Produto;
 import com.fsv.cursomc.domain.enums.EstadoPagamento;
@@ -141,7 +141,7 @@ public class CursomcApplication implements CommandLineRunner {
 		Pedido ped1 = new Pedido(null, sdf.parse("30/09/2017 10:32"), cli1, e1);
 		Pedido ped2 = new Pedido(null, sdf.parse("10/10/2017 19:35"), cli1, e2);
 
-		Pagamento pagto1 = new PagamentoComCartão(null, EstadoPagamento.QUITADO, ped1, 6);
+		Pagamento pagto1 = new PagamentoComCartao(null, EstadoPagamento.QUITADO, ped1, 6);
 		ped1.setPagamento(pagto1);
 
 		Pagamento pagto2 = new PagamentoComBoleto(null, EstadoPagamento.PENDENTE, ped2, sdf.parse("20/10/2017 00:00"),
